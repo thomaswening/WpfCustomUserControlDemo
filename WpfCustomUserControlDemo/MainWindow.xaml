@@ -8,49 +8,16 @@
         
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
+    <!--add custom user control namespace as xmlns:uc attribute like above-->
+    
     <TabControl>
         <TabItem Header="test" FontSize="15">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="test" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="50"/>
-                <TextBlock Grid.Row="0" Grid.Column="1" Text="test" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="50"/>
-                <TextBlock Grid.Row="0" Grid.Column="2" Text="test" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="50"/>
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="test" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="50"/>
-                <TextBlock Grid.Row="1" Grid.Column="1" Text="test" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="50"/>
-                <TextBlock Grid.Row="1" Grid.Column="2" Text="test" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="50"/>
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="test" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="50"/>
-                <TextBlock Grid.Row="2" Grid.Column="1" Text="test" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="50"/>
-                <TextBlock Grid.Row="2" Grid.Column="2" Text="test" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="50"/>
-            </Grid>
+            
+            <!--include the custom user control as a self-closing tag with uc: prefix,
+            needs to be compiled once for intellisense to recognise-->
+            <uc:testTab />
+            
         </TabItem>
         
         <TabItem Header="kek" FontSize="15">
